@@ -1,0 +1,2 @@
+# macroDjango
+# Individualization django framwork
