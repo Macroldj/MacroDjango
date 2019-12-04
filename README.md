@@ -1,2 +1,2 @@
-# macroDjango
-# Individualization django framwork
+## macroDjango
+快速开展业务而生
