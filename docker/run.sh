@@ -8,16 +8,10 @@
 
 
 echo "boot all tornado projects"
+# config ENV
 
-# 启动单元测试
-echo "boot unitTest of tornado"
 
-# 上传 docker hub
-echo "push docker image to docker hub"
+# 数据库相关的配置
 
-#docker push macroldj/macro_django:v1
+# 进行启动
 
-# build image
-echo "rm docker image tornado && build docker image"
-
-# inti
