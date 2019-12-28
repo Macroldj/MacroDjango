@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: macrodjango:v1
+    ports:
+      - "8000:8000"
+    volumes:
+      - /home/code :/code
+    restart: always
+
+  redis:
+    image: redis:4.0.13 
+    container_name: redis
+    restart: always
+    command: --appendonly yes
+    ports:
+      - 6379:6379
+    volumes:
+      - ./redis_data:/data
+  mysql:
+   container_name: v-mysql
+   image: mysql/mysql-server:5.7
+   environment:
+    MYSQL_DATABASE: test
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_ROOT_HOST: '%'
+   ports:
+   - "3306:3306"
+   restart: always

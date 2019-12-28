@@ -1,2 +1,1 @@
-## macroDjango
-快速开展业务而生
+# django dome
