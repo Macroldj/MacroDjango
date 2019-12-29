@@ -20,7 +20,7 @@ services:
     volumes:
       - ./redis_data:/data
   mysql:
-   container_name: v-mysql
+   container_name: macro-mysql
    image: mysql/mysql-server:5.7
    environment:
     MYSQL_DATABASE: test
