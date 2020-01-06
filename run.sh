@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # boot application
 
 function build(){
