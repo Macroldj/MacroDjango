@@ -10,6 +10,7 @@ function build(){
 }
 
 function start(){
+    docker-compose down
     echo -e "\033[32m[ <<<< start service >>>> ]\033[0m"
     docker-compose build
     docker-compose up -d
