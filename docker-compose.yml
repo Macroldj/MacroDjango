@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - /home/code :/code
+      - /home/code : workspack
     restart: always
     depends_on:
       - redis
