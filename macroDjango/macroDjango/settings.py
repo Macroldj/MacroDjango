@@ -37,6 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'user.apps.UserConfig',
+    'DjangoUeditor',
+    'xadmin',
+    'crispy_forms',
+    'django.conf',
+    'django_filters',
+    'rest_framework.authtoken',
+    'social_django',
 ]
 
 MIDDLEWARE = [
