@@ -1,0 +1,10 @@
+django==2.2.12
+django-crispy-forms>=1.6.0
+future
+django-formtools
+httplib2
+requests
+six
+django-import-export
+djangorestframework
+Pillow
