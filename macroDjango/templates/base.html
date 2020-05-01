@@ -24,7 +24,7 @@
     <div class="cw1200">
         <ul class="fl">
             {% if request.user.is_authenticated %}
-            <li class="tb"><p>您好:{{ request.user.username }}，欢迎访问ChengDu Travel！</p></li>
+            <li class="tb"><p>您好:{{ request.user.username }}，欢迎访问甘肃 Travel！</p></li>
 			<li class="tb" ><a style="color: red" id="check" href="#" >签到</a>
 {#                <span>|</span></li>#}
             {% else %}
@@ -87,7 +87,7 @@
 <div id="header">
     <div class="cw1200">
         <!-------------------logo------------------->
-        <div class="logo fl"><a title="" href="{% url 'index' %}"><img alt="" src="{% static 'images/t_logo.jpg' %}"></a></div>
+        <div class="logo fl"><a title="" href="{% url 'index' %}"><img alt="" weight="286px" height="95px" src="{% static 'images/t_logo.jpg' %}"></a></div>
         <div class="search_nav fl">
             <!-------------------搜索------------------->
             <div class="search radius6">
@@ -110,7 +110,7 @@
             <div class="nav">
                 <ul>
                     <li><a title="" {% if now_type == 'index' %}class="cur"{% endif %} href="{% url 'index' %}">首页</a></li>
-                    <li><a title="" {% if now_type == 'scenic' %}class="cur"{% endif %} href="{% url 'scenicspots:all' %}?list_type=scenic">成都旅游</a></li>
+                    <li><a title="" {% if now_type == 'scenic' %}class="cur"{% endif %} href="{% url 'scenicspots:all' %}?list_type=scenic">甘肃旅游</a></li>
                     <li><a title="" {% if now_type == 'shop' %}class="cur"{% endif %} href="{% url 'shop:all' %}">特产商城</a></li>
                     <li><a title="" {% if now_type == 'diary' %}class="cur"{% endif %} href="{% url 'diarys:all' 'new' %}">游记文章</a></li>
                     <li><a title="" {% if now_type == 'news' %}class="cur"{% endif %} href="{% url 'news:all' %}">新闻资讯</a></li>
@@ -130,7 +130,7 @@
         <div class="b_logo"><img alt="" src="{% static 'images/b_logo.png' %}"/></div>
         <div class="con">
             <p>xx公司 版权所有</p>
-            <p>地址：四川省成都市文化游客接待中心　邮编：000000　电话：0000-00000000　业务电话：0000-00000000</p>
+            <p>地址：甘肃省游客接待中心　邮编：000000　电话：0000-00000000　业务电话：0000-00000000</p>
             <p>Copyright 2019 macroldj All Rights Reserved 技术支持：macroldj</p>
         </div>
         <div class="clear"></div>

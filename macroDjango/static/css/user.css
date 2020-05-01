@@ -23,7 +23,7 @@ body{width:100%;min-width:1280px;background:#efefef;}
 .scale-effect:hover{transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-o-transform:scale(1.2);-ms-transform:scale(1.2);}
 /*-----------------版头----------------*/
 #header{height:60px;z-index:1000;background:white;position:relative;-webkit-box-shadow:0px 1px 5px rgba(0,0,0,0.4);-moz-box-shadow:0px 1px 5px rgba(0,0,0,0.4);box-shadow:0px 1px 5px rgba(0,0,0,0.4);}
-#header .logo{float:left;margin-top:3px;}
+#header .logo{float:left;margin-top:3px; weight:186px; height:53px}
 #header .nav{float:left;margin-top:15px;margin-left:80px;}
 #header .nav li{float:left;}
 #header .nav li span{color:#eee;margin:0 20px;}

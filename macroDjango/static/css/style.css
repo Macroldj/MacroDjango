@@ -69,7 +69,7 @@ body{width:100%;min-width:1280px;}
 #toolbar .user-bd .nav_sort .i9{background:url(../images/user_ico9.png) no-repeat center;}
 /*-----------------版头----------------*/
 #header{position:relative;height:110px;border-bottom:2px solid #f60;}
-#header .logo{margin-top:10px;}
+#header .logo{margin-top:10px;weight:186px; height:53px}
 #header .search_nav{margin-left:50px;padding-top:20px;}
 /*-----------------搜索----------------*/
 #header .search{border:2px solid #f60;height:40px;margin:0 auto;width:549px;}
