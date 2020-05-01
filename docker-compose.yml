@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - /home/code : workspack
+      - /home/code:/data
     restart: always
     depends_on:
       - redis
@@ -22,6 +22,7 @@ services:
       - 6379:6379
     volumes:
       - ./redis_data:/data
+
   mysql:
    container_name: macro-mysql
    image: mysql/mysql-server:5.7
@@ -32,4 +33,3 @@ services:
    ports:
    - "3306:3306"
    restart: always
-

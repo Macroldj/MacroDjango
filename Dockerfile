@@ -1,4 +1,4 @@
-FROM python:3.6-slim
+FROM python:3.7-slim
 MAINTAINER macroldj Alan /n Li
 RUN sed -i 's/http\:\/\/deb.debian.org/https\:\/\/mirrors.aliyun.com/g' /etc/apt/sources.list \
  && sed -i 's/http\:\/\/security.debian.org/https\:\/\/mirrors.aliyun.com/g' /etc/apt/sources.list \
@@ -10,6 +10,6 @@ WORKDIR /home/workspace
 
 COPY . . 
 
-ADD ./requirements.txt /tmp/requirements.txt
+ADD ./macroDjango/requirements.txt /tmp/requirements.txt
 RUN pip3 install --no-cache-dir  -i https://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com -r /tmp/requirements.txt && rm -rf /tmp/requirements.txt
 CMD ["sh","runserver.sh"]
