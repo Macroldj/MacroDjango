@@ -8,3 +8,6 @@ six
 django-import-export
 djangorestframework
 Pillow
+djangorestframework-jwt
+django-simple-captcha
+alipay

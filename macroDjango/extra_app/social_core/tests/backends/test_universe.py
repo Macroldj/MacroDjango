@@ -18,8 +18,8 @@ class UniverseAuth2Test(OAuth2Test):
                 'slug': 'scott-vitale',
                 'first_name': 'Scott',
                 'last_name': 'Vitale',
-                'created_at': '2019-01-08T15:49:42.514Z',
-                'updated_at': '2019-01-17T19:41:39.711Z',
+                'created_at': '2012-01-08T15:49:42.514Z',
+                'updated_at': '2012-01-17T19:41:39.711Z',
                 'email': 'scott+awesome@universe.com',
             }
         }
