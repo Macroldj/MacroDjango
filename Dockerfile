@@ -1,5 +1,5 @@
 FROM python:3.6-slim
-MAINTAINER macroldj Alan Li
+MAINTAINER macroldj Alan /n Li
 RUN sed -i 's/http\:\/\/deb.debian.org/https\:\/\/mirrors.aliyun.com/g' /etc/apt/sources.list \
  && sed -i 's/http\:\/\/security.debian.org/https\:\/\/mirrors.aliyun.com/g' /etc/apt/sources.list \
  && apt update \
