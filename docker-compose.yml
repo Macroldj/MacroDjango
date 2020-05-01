@@ -31,5 +31,5 @@ services:
     MYSQL_ROOT_PASSWORD: xiaoxiao
     MYSQL_ROOT_HOST: '%'
    ports:
-   - "3306
+   - "3306"
    restart: always
