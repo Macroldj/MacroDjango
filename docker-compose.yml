@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - /home/code:/data
+      - ./code:/data
     restart: always
     depends_on:
       - redis
@@ -19,7 +19,7 @@ services:
     restart: always
     command: --appendonly yes
     ports:
-      - 6379:6379
+      - 6379
     volumes:
       - ./redis_data:/data
 
@@ -31,5 +31,5 @@ services:
     MYSQL_ROOT_PASSWORD: xiaoxiao
     MYSQL_ROOT_HOST: '%'
    ports:
-   - "3306:3306"
+   - "3306
    restart: always
