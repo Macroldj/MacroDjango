@@ -18,13 +18,11 @@ class Spots(models.Model):
                            filePath="Scenic/ueditor/", default='')
     image = models.ImageField(upload_to='spots/thumbnail/%Y/%m', max_length=100, verbose_name='缩略图')
     picture = models.ImageField(upload_to='spots/mainfigure/%Y/%m', max_length=100, verbose_name='主图')
-    classification = models.CharField(max_length=10, choices=(('natural', '景区'),
-                                                              ('leisure', '休闲')),
+    classification = models.CharField(max_length=10, choices=(('natural', '自然景区'),
+                                                              ('leisure', '人文景区')),
                                       default='natural', verbose_name='分类')
-    phone = models.CharField(max_length=15, verbose_name='联系电话')
-    businessHours = models.CharField(max_length=10, default='全年', verbose_name='开放时间')
     address = models.CharField(max_length=50, verbose_name='地址')
-    price = models.FloatField(verbose_name='价格')
+    price = models.CharField(verbose_name='价格',max_length=20)
     # 小数点后6位，总共9位数,默认位置设为成都市政府
     x = models.DecimalField(decimal_places=6, max_digits=9, default=104.072742, verbose_name='经度')
     y = models.DecimalField(decimal_places=6, max_digits=9, default=30.578984, verbose_name='纬度')
