@@ -21,7 +21,13 @@ class Spots(models.Model):
     classification = models.CharField(max_length=10, choices=(('natural', '自然景区'),
                                                               ('leisure', '人文景区')),
                                       default='natural', verbose_name='分类')
-    address = models.CharField(max_length=50, verbose_name='地址')
+    grade = models.CharField(max_length=10,choices=(("A1","A1"),
+                                                    ("A2","A2"),
+                                                    ("A3","A3"),
+                                                    ("A4","A4"),
+                                                    ("A5","A5"),
+                                                    ("other","other"),),default="other", verbose_name="景区级别")
+    address = models.CharField(max_length=50, verbose_name='景区属地')
     price = models.CharField(verbose_name='价格',max_length=20)
     # 小数点后6位，总共9位数,默认位置设为成都市政府
     x = models.DecimalField(decimal_places=6, max_digits=9, default=104.072742, verbose_name='经度')
