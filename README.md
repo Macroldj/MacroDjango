@@ -1,12 +1,10 @@
-# Django 旅游系统
+# django dome
 
 以集成的插件
 - [x] xadmin
 - [x] DjangoUeditor
 - [x] 第三方登录
-- [x] 登录登出
-- [x] 旅游展示
-
-正在测试中
+- [x] mysql orm 生成数据
+- [x] redis 缓存
 - [ ] 支付宝支付
-- [ ] 微信支付
+
