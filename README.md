@@ -1,4 +1,4 @@
-# django dome
+# Django 旅游系统
 
 以集成的插件
 - [x] xadmin
