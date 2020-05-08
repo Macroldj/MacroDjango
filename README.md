@@ -1,4 +1,4 @@
-# django dome
+# django demo
 
 以集成的插件
 - [x] xadmin
