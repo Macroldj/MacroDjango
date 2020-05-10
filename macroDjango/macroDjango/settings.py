@@ -97,6 +97,17 @@ DATABASES = {
     }
 }
 
+# mysql 连接方式
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'macrodjango',
+#         'USER': 'root',
+#         'PASSWORD': '123456',
+#         'HOST': '118.25.95.136',
+#         'PORT': '3306',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
