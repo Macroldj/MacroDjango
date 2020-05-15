@@ -33,7 +33,7 @@ router.register(r'users', UserViewset, basename="users")
 urlpatterns = [
 
     # 工具
-    re_path(r'^captcha/', include('captcha.urls')),
+    path(r'^captcha/', include('captcha.urls')),
     path('xadmin/', xadmin.site.urls),
     path('ueditor/', include('DjangoUeditor.urls')),
 
