@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.shortcuts import render
 from django.views.generic.base import View
 from django.contrib.auth.hashers import make_password
@@ -11,8 +13,9 @@ import json
 from captcha.models import CaptchaStore
 from captcha.helpers import captcha_image_url
 
-from .forms import *
-from .models import *
+from .forms import RegisterForm, MyUser, LoginForm, ForgetForm, EmailVerifyRecord, NewPwdForm, AreaInfo, TheContact, \
+    InfoForm, UploadPortraitForm, ContactForm, InfoNewPwdForm
+from scenicspots.models import Gallery
 from operation.models import SpotsComments, DiaryComments, ProductComments, ActiveComments, UserCollect
 from pay.models import OrderItems
 from utils.send_email import send_register_email
@@ -30,11 +33,9 @@ class IndexView(View):
     """
     def get(self, request):
         # banner
-        banners = Banner.objects.all()
+        banners = Gallery.objects.all()
         # 精彩活动
         actives = Active.objects.order_by('-add_time')[:3]
-        print("*"*50)
-        print(actives)
         # 热门景区
         natural_spots = Spots.objects.filter(classification='natural')
         # 休闲度假
@@ -65,7 +66,6 @@ class IndexView(View):
 
 
 class RegisterView(View):
-
     """
     注册
     """
@@ -122,6 +122,7 @@ class ActiveView(View):
                 user.is_active = True
                 user.save()
         return render(request, 'register.html', {})
+
 
 class LoginView(View):
     """登陆"""

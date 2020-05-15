@@ -62,7 +62,7 @@ body{width:100%;min-width:1280px;background:#efefef;}
 #header .user-bd .nav_sort .i8{background:url(../images/user_ico8.png) no-repeat center;}
 #header .user-bd .nav_sort .i9{background:url(../images/user_ico9.png) no-repeat center;}
 /*-----------------用户banner----------------*/
-#user_banner{height:220px;text-align:center;
+#user_banner{height:400px;text-align:center;
 background-image: -moz-linear-gradient(top, #adebcb, #5fd9cb); /*火狐*/
 background: -o-linear-gradient(top, #adebcb 0%,#5fd9cb 100%);/*Opera*/
 background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #adebcb), color-stop(1,#5fd9cb)); /*Chrome*/

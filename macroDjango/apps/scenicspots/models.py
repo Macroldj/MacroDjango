@@ -51,13 +51,13 @@ class Gallery(models.Model):
     image = models.ImageField(upload_to='spots/banner/%Y/%m', verbose_name='轮播图', max_length=100)
     add_time = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
+
     class Meta:
         verbose_name = '轮播图'
         verbose_name_plural = verbose_name
 
     def __str__(self):
         return self.title
-
 
 
 class Active(models.Model):
