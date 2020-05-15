@@ -14,7 +14,7 @@ services:
       - mysql
 
   redis:
-    image: redis:4.0.13 
+    image: redis:4.0.13
     container_name: redis
     restart: always
     command: --appendonly yes

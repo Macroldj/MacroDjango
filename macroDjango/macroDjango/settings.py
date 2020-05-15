@@ -15,10 +15,11 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import sys
 import random
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0,BASE_DIR)
-sys.path.insert(0,os.path.join(BASE_DIR, 'apps'))
-sys.path.insert(0,os.path.join(BASE_DIR, "extra_app"))
+sys.path.insert(0, BASE_DIR)
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+sys.path.insert(0, os.path.join(BASE_DIR, "extra_app"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -30,7 +31,6 @@ SECRET_KEY = 'l+yczf9j1m2%xn((s^_r0*iptc)v1+8g49t%kp5#fvb-@m-yg&'
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
 
 # Application definition
 
@@ -127,7 +127,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -141,7 +140,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
@@ -149,12 +147,12 @@ REGEX_MOBILE = ''
 AUTH_USER_MODEL = 'users.MyUser'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR,  'static').replace('\\','/')
-STATICFILES_DIRS  =(
-    ("css", os.path.join(STATIC_ROOT,'css').replace('\\','/')),
-    ("js", os.path.join(STATIC_ROOT,'js').replace('\\','/')),
-('images',os.path.join(STATIC_ROOT,'images').replace('\\','/') ),
-('fonts',os.path.join(STATIC_ROOT,'fonts').replace('\\','/') ),
+STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\', '/')
+STATICFILES_DIRS = (
+    ("css", os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
+    ("js", os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
+    ('images', os.path.join(STATIC_ROOT, 'images').replace('\\', '/')),
+    ('fonts', os.path.join(STATIC_ROOT, 'fonts').replace('\\', '/')),
 )
 
 # 处理静态文件
@@ -164,28 +162,28 @@ MEDIA_DIRS = (
     os.path.join(BASE_DIR, 'media')
 )
 
-
 # 验证码的设置
-CAPTCHA_IMAGE_SIZE = (100,30)  #设置生成验证码图片的长和宽，单位为像素
-CAPTCHA_OUTPUT_FORMAT = u'%(text_field)s %(image)s %(hidden_field)s' #设置输出的格式，该插件自动在模板中生成3个元素：一个验证码图片，一个验证码输入框、一个用于存放秘钥的隐藏输入框。可以在此根据需要调整其在模板中生成的先后顺序
-CAPTCHA_FOREGROUND_COLOR = (random.randint(32, 127), random.randint(32, 127), random.randint(32, 127))  #设置验证码图片前景色
-CAPTCHA_BACKGROUND_COLOR = '#ffffff'  #设置验证码图片背景色
-CAPTCHA_FONT_SIZE = 30   #设置验证码图片中字体大小
-CAPTCHA_FONT_PATH = 'C:\Windows\Fonts\Arial\\arial.ttf'   #设置字体样式，支持TTF等文件格式
-CAPTCHA_LETTER_ROTATION = (-35,35)  #设置验证码中字母旋转的角度
-CAPTCHA_NOISE_FUNCTIONS = ('captcha.helpers.noise_arcs','captcha.helpers.noise_dots',)  #是否添加干扰点和干扰线，当值为'captcha.helpers.noise_null'时，表示不添加干扰
+CAPTCHA_IMAGE_SIZE = (100, 30)  # 设置生成验证码图片的长和宽，单位为像素
+CAPTCHA_OUTPUT_FORMAT = u'%(text_field)s %(image)s %(hidden_field)s'  # 设置输出的格式，该插件自动在模板中生成3
+# 个元素：一个验证码图片，一个验证码输入框、一个用于存放秘钥的隐藏输入框。可以在此根据需要调整其在模板中生成的先后顺序
+CAPTCHA_FOREGROUND_COLOR = (random.randint(32, 127), random.randint(32, 127), random.randint(32, 127))  # 设置验证码图片前景色
+CAPTCHA_BACKGROUND_COLOR = '#ffffff'  # 设置验证码图片背景色
+CAPTCHA_FONT_SIZE = 30  # 设置验证码图片中字体大小
+CAPTCHA_FONT_PATH = 'C:\Windows\Fonts\Arial\\arial.ttf'  # 设置字体样式，支持TTF等文件格式
+CAPTCHA_LETTER_ROTATION = (-35, 35)  # 设置验证码中字母旋转的角度
+CAPTCHA_NOISE_FUNCTIONS = [
+    'captcha.helpers.noise_arcs',
+    'captcha.helpers.noise_dots', ]  # 是否添加干扰点和干扰线，当值为'captcha.helpers.noise_null'时，表示不添加干扰
 CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'
-CAPTCHA_TIMEOUT = '5' #设置验证码的有效时间，单位为分钟
-CAPTCHA_LENGTH = '4' #当验证码类型为字符型时，指定字母个数
-
+CAPTCHA_TIMEOUT = '5'  # 设置验证码的有效时间，单位为分钟
+CAPTCHA_LENGTH = '4'  # 当验证码类型为字符型时，指定字母个数
 
 EMAIL_HOST = 'smtp.163.com'
 EMAIL_PORT = 25
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS= False
+EMAIL_USE_TLS = False
 EMAIL_FROM = ''
-
 
 # 支付宝设置
 ALIPAY_APPID = 'appidappidappidappidappid'
